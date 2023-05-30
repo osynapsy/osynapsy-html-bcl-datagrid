@@ -1,0 +1,25 @@
+{
+    "name": "osynapsy/osynapsy-html-bcl-datagrid",
+    "version": "1.0",
+    "homepage": "http://www.osynapsy.net/html-bcl-datagrid",
+    "type": "library",
+    "description": "Osynapsy bootstrap datagrid implementation",
+    "keywords": ["Osynapsy", "Datagrid component"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pietro Celeste",
+            "email": "p.celeste@osynapsy.net",
+            "homepage": "https://github.com/osynapsy/osynapsy-html-bcl-datagrid/wiki"
+        }
+    ],
+    "require": {
+        "php" : ">=7.2.0",
+        "osynapsy/osynapsy-html-bcl" : "@stable"
+    },
+    "autoload" : {
+        "psr-4": {
+            "Osynapsy\\Bcl\\DataGrid\\": "src/Osynapsy/Bcl/DataGrid/"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+
+/*
+ * This file is part of the Osynapsy package.
+ *
+ * (c) Pietro Celeste <p.celeste@osynapsy.net>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+.bcl-datagrid > div.row {margin-bottom: -1px;}
+.bcl-datagrid div.row {margin-left: 0px !important; margin-right: 0px !important;}
+.bcl-datagrid .bcl-datagrid-th, .bcl-datagrid .bcl-datagrid-head {font-weight: bold; cursor: pointer;}
+.bcl-datagrid .bcl-datagrid-th-order-by:hover {background-color: #eee !important;}
+.bcl-datagrid .bcl-datagrid-head {font-size: 1.2em; margin-left: -28px; margin-bottom: 5px !important;}
+.bcl-datagrid-thead > .bcl-datagrid-th {padding: 5px 5px; background-color: #fdfdfd; position: relative; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.bcl-datagrid-body .bcl-datagrid-body-row:hover { background-color: #f8f8f8;}
+.bcl-datagrid-body .row {position: relative;}
+.bcl-datagrid-body div.bcl-datagrid-body-row:hover .cmd-row {display: block;}
+.bcl-datagrid .bcl-datagrid-td {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.9em; padding: 5px 5px !important;}
+.bcl-datagrid-th-order-label {position: absolute; top: 0px; right: 0px; font-size: 8px; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 1px 5px; background-color: white; border-radius: 0px 0px 0px 3px;}
+.bcl-datagrid-body .cmd-row {display: none; vertical-align: middle; z-index: 9999; opacity: 0.90; padding: 5px 15px !important; border: 1px solid #efefef; border-radius: 10px 0px 0px 10px;  background-color: white; position: absolute; height: calc(100% + 2px); top: -1px; right: 0px;}
+.bcl-datagrid-body .cmd-row:hover a {color: red !important;}
+.bcl-datagrid-border-on .bcl-datagrid-thead {border-top: 1px solid #ddd; border-right: 1px solid #ddd;}
+.bcl-datagrid-border-on .bcl-datagrid-body .row:first-child {border-top: 1px solid #ddd;}
+.bcl-datagrid-border-on .row > .bcl-datagrid-td:last-child {border-right: 0px;}
+.bcl-datagrid-border-on .bcl-datagrid-body .row, .bcl-datagrid-border-on .bcl-datagrid-head {border-bottom: 1px solid #ddd; border-right: 1px solid #ddd;}
+.bcl-datagrid-border-on-horizontal .row .bcl-datagrid-td:first-child {border-left: 1px solid #ddd;}
+.bcl-datagrid-border-on-horizontal .bcl-datagrid-thead > .bcl-datagrid-th:first-child {border-left: 1px solid #ddd;}
+.bcl-datagrid-border-on-full .bcl-datagrid-thead > .bcl-datagrid-th {border-left: 1px solid #ddd;}
+.bcl-datagrid-border-on-full .row .bcl-datagrid-td {border-left: 1px solid #ddd;}

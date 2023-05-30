@@ -1,0 +1,116 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d27d537825b754b406b694cff744a9a3",
+    "packages": [
+        {
+            "name": "osynapsy/osynapsy-html-bcl",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/osynapsy/osynapsy-html-bcl.git",
+                "reference": "d55adcd5b07ad10da5306f5a7b0a55ebff34cdda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/osynapsy/osynapsy-html-bcl/zipball/d55adcd5b07ad10da5306f5a7b0a55ebff34cdda",
+                "reference": "d55adcd5b07ad10da5306f5a7b0a55ebff34cdda",
+                "shasum": ""
+            },
+            "require": {
+                "osynapsy/osynapsy-html2": "@stable",
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Osynapsy\\Bcl\\": "src/Osynapsy/Bcl/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pietro Celeste",
+                    "email": "p.celeste@osynapsy.net",
+                    "homepage": "https://github.com/osynapsy/osynapsy-html-bcl/wiki"
+                }
+            ],
+            "description": "Osynapsy bootstrap components library",
+            "homepage": "http://www.osynapsy.net/html-bcl",
+            "keywords": [
+                "Components library",
+                "Osynapsy"
+            ],
+            "support": {
+                "issues": "https://github.com/osynapsy/osynapsy-html-bcl/issues",
+                "source": "https://github.com/osynapsy/osynapsy-html-bcl/tree/v0.1"
+            },
+            "time": "2023-05-27T07:28:21+00:00"
+        },
+        {
+            "name": "osynapsy/osynapsy-html2",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/osynapsy/osynapsy-html2.git",
+                "reference": "323dc77762478a447b257d443cf0396fdbfa9272"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/osynapsy/osynapsy-html2/zipball/323dc77762478a447b257d443cf0396fdbfa9272",
+                "reference": "323dc77762478a447b257d443cf0396fdbfa9272",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Osynapsy\\Html\\": "src/Osynapsy/Html"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pietro Celeste",
+                    "email": "p.celeste@osynapsy.net",
+                    "homepage": "https://github.com/osynapsy/osynapsy-html2/wiki"
+                }
+            ],
+            "description": "Osynapsy html library",
+            "homepage": "http://www.osynapsy.net/html2",
+            "keywords": [
+                "Html factory library",
+                "Osynapsy"
+            ],
+            "support": {
+                "issues": "https://github.com/osynapsy/osynapsy-html2/issues",
+                "source": "https://github.com/osynapsy/osynapsy-html2/tree/v1.0"
+            },
+            "time": "2023-05-27T08:21:13+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "osynapsy/osynapsy-html-bcl": 0
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.2.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
