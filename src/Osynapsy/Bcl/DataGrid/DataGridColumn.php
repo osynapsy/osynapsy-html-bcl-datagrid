@@ -27,7 +27,7 @@ class DataGridColumn
     const FIELD_TYPE_INTEGER = 'integer';
     const FIELD_TYPE_DOLLAR  = 'dollar';
     const FIELD_TYPE_CHECKBOX = 'check';
-    const FIELD_TYPE_COMMAND = 'commands';
+    const FIELD_TYPE_COMMAND = 'command';
 
     private $properties = [
         'dimension' => [
@@ -138,7 +138,10 @@ class DataGridColumn
     public function valueFormatting($value, &$cell, $properties, $rec, &$tr)
     {
         if (!empty($properties['function'])) {
-            $value = $properties['function']($value, $cell, $rec, $tr);
+            $value = $properties['function']($value, $rec, $cell, $tr);
+        }
+        if (!empty($properties['type']) && is_callable($properties['type'])) {
+            $value = $properties['type']($value, $rec, $cell, $tr);
         }
         switch($properties['type']) {
             case self::FIELD_TYPE_CHECKBOX:
