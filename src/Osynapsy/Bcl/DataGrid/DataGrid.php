@@ -400,7 +400,7 @@ class DataGrid extends Base
      */
     public function setBorderOn($borderType = 'horizontal')
     {
-        $this->setClass(sprintf('bcl-datagrid-border-on bcl-datagrid-border-on-%s', $borderType));
+        $this->addClass(sprintf('bcl-datagrid-border-on bcl-datagrid-border-on-%s', $borderType));
     }
 
     /**
