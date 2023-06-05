@@ -115,7 +115,7 @@ class DataGrid extends Base
      */
     public function getRowsCount()
     {
-        return count($this->data);
+        return count($this->dataset);
     }
     
     public function getTitle()
