@@ -22,7 +22,7 @@ class DataGridBuilder
             $Datagrid->add(self::buildTitle($title));
         }        
         if ($Datagrid->showHeader) {
-            $Datagrid->add(self::buildColumnHead($Datagrid->getColumns(), empty($Paginator) ? [] : $Paginator->getOrderBy()));
+            $Datagrid->add(self::buildColumnHead($Datagrid->getColumns(), $Paginator->getOrderBy()));
         }        
         $Datagrid->add(self::bodyFactory($Datagrid->getColumns(), $Datagrid->getDataset(), $Datagrid->emptyMessage));
         //If datagrid has pager append to foot and show it.
@@ -52,7 +52,7 @@ class DataGridBuilder
      *
      * @return Tag
      */
-    protected static function buildColumnHead(array $columns, array $orderByFields)
+    protected static function buildColumnHead(array $columns, $orderByFields)
     {
         $container = new Tag('div', null, 'd-none d-sm-block hidden-xs');
         $tr = $container->add(new Tag('div', null, 'row bcl-datagrid-thead'));        
