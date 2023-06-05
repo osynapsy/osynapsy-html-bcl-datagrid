@@ -70,9 +70,7 @@ class DataGridColumn
     public function buildTh($orderedFields)
     {
         $rawLabel = $this->properties['label'];
-        if (empty($rawLabel)) {
-            return;
-        } elseif ($rawLabel[0] == '_') {
+        if (empty($rawLabel) || $rawLabel[0] === '_' || $this->properties['type'] === self::FIELD_TYPE_COMMAND) {
             return;
         }
         if ($this->properties['type'] === self::FIELD_TYPE_CHECKBOX) {

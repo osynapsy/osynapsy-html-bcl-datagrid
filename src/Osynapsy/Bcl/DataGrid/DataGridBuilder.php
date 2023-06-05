@@ -146,7 +146,7 @@ class DataGridBuilder
     {
         $row = new Tag('div', null, 'd-flex justify-content-end mt-1');
         if ($DataGrid->showExecutionTime) {
-            $row->add(sprintf('<small class="p-2 mr-auto">Tempo di esecuzione : %s sec</small>', $executionTime));
+            $row->add(sprintf('<small class="p-2 me-auto">Execution time : %s sec</small>', $executionTime));
         }
         if ($DataGrid->showPaginationPageDimension) {
             $row->add('<div class="p-2">Elementi per pagina</div>');

@@ -174,7 +174,7 @@ class DataGrid extends Base
         return $this;
     }   
 
-    public function setDbPaginator($dbPaginator, $rowForPage = 5, $showPageDimension = true, $showPageInfo = true)
+    public function setDbPaginator($dbPaginator, $rowForPage = 5, $showPageDimension = true, $showPageInfo = true, $showExecutionTime = true)
     {
         $paginatorId = sprintf('%s%s', $this->id, strpos($this->id, '_') ? '_paginator' : 'Paginator');
         $DataGridPaginator = new DataGridPaginator($paginatorId, $rowForPage);
@@ -183,6 +183,7 @@ class DataGrid extends Base
         $this->paginator = $DataGridPaginator;
         $this->showPaginationPageDimension = $showPageDimension;
         $this->showPaginationPageInfo = $showPageInfo;
+        $this->showExecutionTime = $showExecutionTime;
         return $this->paginator;
     }
 
