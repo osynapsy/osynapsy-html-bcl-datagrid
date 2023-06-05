@@ -29,3 +29,4 @@
 .bcl-datagrid-border-on-horizontal .bcl-datagrid-thead > .bcl-datagrid-th:first-child {border-left: 1px solid #ddd;}
 .bcl-datagrid-border-on-full .bcl-datagrid-thead > .bcl-datagrid-th {border-left: 1px solid #ddd;}
 .bcl-datagrid-border-on-full .row .bcl-datagrid-td {border-left: 1px solid #ddd;}
+.bcl-datagrid-border-on > .bcl-datagrid-body-row {border-left: 1px solid #ddd}
