@@ -22,7 +22,7 @@ class DataGridBuilder
             $Datagrid->add(self::buildTitle($title));
         }        
         if ($Datagrid->showHeader) {
-            $Datagrid->add(self::buildColumnHead($Datagrid->getColumns(), $Paginator->getOrderBy()));
+            $Datagrid->add(self::buildColumnHead($Datagrid->getColumns(), $Paginator ? $Paginator->getOrderBy() : ''));
         }        
         $Datagrid->add(self::bodyFactory($Datagrid->getColumns(), $Datagrid->getDataset(), $Datagrid->emptyMessage));
         //If datagrid has pager append to foot and show it.
