@@ -60,21 +60,43 @@ class DataGridPaginator extends Base
         if (!$this->loaded) {
             $this->loadData();
         }
-        $this->add(new Hidden($this->id))->addClass('bcl-paginator-current-page');
-        $this->add(new Hidden($this->id.'OrderBy'))->addClass('bcl-paginator-order-by');        
+        $this->add($this->fieldCurrentPageFactory());
+        $this->add($this->fieldOrderByFactory());        
         list($pageMin, $pageMax) = $this->calcPageMinMax();
         $this->add($this->ulFactory($pageMin, $pageMax));
+    }
+    
+    protected function fieldCurrentPageFactory()
+    {
+        $Hidden = new Hidden($this->id);
+        $Hidden->addClass('bcl-paginator-current-page');
+        $Hidden->setValue($_REQUEST[$this->id] ?? '');
+        return $Hidden;
+    }
+    
+    protected function fieldOrderByFactory()
+    {
+        $fieldId = $this->id . 'OrderBy';
+        $Hidden = new Hidden($fieldId);
+        $Hidden->addClass('bcl-paginator-order-by');
+        $Hidden->setValue($_REQUEST[$fieldId] ?? '');
+        return $Hidden;
     }
     
     public function loadData($defaultPage = null)
     {
         $requestPage = filter_input(\INPUT_POST, $this->id) ?? $defaultPage;        
-        $sort = $this->getSort(filter_input(\INPUT_POST, $this->id.'OrderBy'));
+        $sortString = filter_input(\INPUT_POST, $this->id.'OrderBy');        
         $pageDimension = $this->statistics['pageDimension'];
-        $this->data = $this->dbPaginator->get($requestPage, $pageDimension, $sort);
+        $this->data = $this->dbPaginator->get($requestPage, $pageDimension, $this->sortStringToArray($sortString));
         $this->statistics = $this->dbPaginator->getAllMeta();        
         $this->loaded = true;
         return $this->data;
+    }
+    
+    protected function sortStringToArray($rawsort)
+    {
+        return str_replace(['][','[',']'], [',', ''], $rawsort);        
     }
 
     protected function calcPageMinMax()
